@@ -1,0 +1,436 @@
+body{
+  font: 20px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
+}
+
+/* Global */
+.container{
+  width:90%;
+  margin:auto;
+  overflow:hidden;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+.button_1{
+  height:38px;
+  background:#FFBD4A;
+  border:0;
+  padding-left: 20px;
+  padding-right:20px;
+  color:white;
+}
+
+.dark{
+  padding:20px;
+  background:#35424a;
+  color:white;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+/* Header **/
+header{
+  background:#0d0d0d;
+  color:#110F0F;
+  padding:0px;
+  min-height:40px;
+  border-bottom:#FFBD4A 3px solid;
+}
+header img{
+	height:100px;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 25px 30px 0 30px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:#FFBD4A;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+/* Showcase */
+#showcase{
+  text-align:left;
+  color:#ffffff;
+  background-color:#0d0d0d;
+}
+
+#showcase h1{
+  margin-top:230px;
+  font-size:45px;
+  margin-bottom:10px;
+}
+
+#showcase p{
+  font-size:20px;
+}
+
+/* Showcase */
+#showcase2{
+  min-height:500px;
+  background:url('../img/showcase.jpg') no-repeat 0 -400px;
+  text-align:center;
+  padding-top:10px;
+  color:#ffffff;
+}
+
+
+#showcase2 p{
+  font-size:50px;
+}
+#showcase3{
+  text-align:left;
+  color:#ffffff;
+  background-color:#0d0d0d;
+}
+#showcase3 h1{
+  font-size:45px;
+  margin-bottom:5px;
+}
+#showcase3 p{
+  font-size:45px;
+}
+/* Showcase */
+#showcase4{
+  text-align:center;
+  color:#0d0d0d;
+}
+
+#showcase4 h1{
+  font-size:45px;
+  margin-bottom:10px;
+}
+
+#showcase4 p{
+  font-size:20px;
+}
+
+#showcase5{
+  min-height:500px;
+  background:url('../img/p1.png') no-repeat 0 10px;
+  text-align:center;
+  padding-top:10px;
+  color:#ffffff;
+}
+#showcase6{
+  min-height:450px;
+  background:url('../img/p2.png') no-repeat 0 1px;
+  text-align:center;
+  padding-top:10px;
+  color:#ffffff;
+}
+#showcase7{
+  min-height:470px;
+  background:url('../img/p3.png') no-repeat -125px -140px;
+  text-align:center;
+  padding-top:10px;
+  color:#ffffff;
+}
+
+#showcase8{
+  min-height:470px;
+  text-align:center;
+  color:#0d0d0d;
+  
+} 
+
+/* Newsletter */
+#newsletter{
+  padding:5px;
+  color:#ffffff;
+  background:black;
+}
+
+#newsletter h1{
+	padding:5px;
+  float:left;
+}
+
+#newsletter form {
+  float:right;
+  margin-top:20px;
+}
+
+#newsletter input[type="email"]{
+  padding:4px;
+  height:25px;
+  width:250px;
+}
+
+/* Boxes */
+#boxes{
+  margin-top:20px;
+}
+
+#boxes .box{
+  float:left;
+  text-align:justify;
+  width:50%;
+
+}
+
+#boxes .box img{
+  width:500px;
+  height:400px;
+}
+
+
+footer{
+  padding:10px;
+  margin-top:10px;
+  color:#ffffff;
+  background-color:#FFBD4A;
+  text-align: center;
+}
+
+/* Media Queries */
+@media(max-width: 768px){
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  header{
+    padding-bottom:20px;
+  }
+
+  #showcase h1{
+    margin-top:40px;
+  }
+
+  #newsletter button, .quote button{
+    display:block;
+    width:100%;
+  }
+
+  #newsletter form input[type="email"], .quote input, .quote textarea{
+    width:100%;
+    margin-bottom:5px;
+  }
+}
+
+.container1 {
+	width:100%;
+	max-width:100%;
+}
+/* Basic appearance stuff ends here */
+
+/* Parallax Horizontal Scroller - by Bree Dulmage, 2020 */
+#proparallax {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	height: 550px;
+}	
+
+#proparallax img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	object-fit: cover;
+}
+
+@keyframes parallax_one { /* controls img.one movement */
+	0% { /* .imageloaded */
+		opacity: 1;
+	}
+	/* .imagehold runs from 0 to 27.77% */
+	27.77% { /* .imageloaded */
+		width: 100%;
+		left: 0rem;
+	}
+	27.78% { /* .imagepreunload */
+		width: 100%;
+		left: 0rem;
+		right: 50rem;
+	}
+	33.34% { /* .imageunloaded */
+		width: 100%;
+		left: 0rem;
+	}
+	
+	61.10%{ /* .imageloaded */
+		width: 100%;
+		left: 0rem;
+	}
+	61.11% { /* .imagepreunload */
+		width: 100%;
+		left: 0rem;
+		right: 50rem;
+		opacity: 1;
+	}
+	66.67% { /* .imageunloaded */
+		width: 0rem;
+		right: 0rem;
+		left: 0rem;
+		height: 100%;
+		opacity: 1;
+	}
+	66.68% { /* .imageoff */
+		opacity: 1;
+	}
+	
+	
+	100% { /* .imageloaded */
+		width: 100%;
+		right: 0rem;
+		left: 0rem;
+		height: 100%;
+		opacity: 0;	
+	}
+}
+
+@keyframes parallax_two { /* controls img.two movement */
+	0% { /* .imageoff */
+		opacity: 0;
+	}
+	27.77% { /* .imageon */
+		left: 0rem;
+		opacity: 0;
+	}
+	27.78% { /* .imageinitial */
+		width: 100%;
+		height: 100%;
+		left: 30rem;
+		opacity: 1;
+	}
+	33.33% { /* .imageloaded */
+		width: 100%;
+		left: 0rem;
+	}
+	/* .imagehold runs from 33.34% - 61.10% */
+	61.10%{ /* .imageloaded */
+		width: 100%;
+		left: 0rem;
+	}
+	61.11% { /* .imagepreunload */
+		width: 100%;
+		left: 0rem;
+		right: 50rem;
+	}
+	66.67% { /* .imageunloaded */
+		width: 0rem;
+		right: 0rem;
+		left: 0rem;
+		height: 100%;
+		opacity: 1;
+	}
+	66.68% { /* .imageoff */
+		opacity: 1;
+	}
+	100% { /* .imageoff */
+		width: 100%;
+		right: 0rem;
+		left: 0rem;
+		height: 100%;
+		opacity: 1;	
+	}
+}
+
+@keyframes parallax_three { /* controls img.three movement */
+	0% { /* .imageoff */
+		opacity: 0;
+	}
+	61.10%{ /* .imageon */
+		opacity: 0;
+	}
+	61.11% { /* .imageinitial */
+		width: 100%;
+		height: 100%;
+		left: 50rem;
+		opacity: 1;		
+	}
+	66.67% { /* .imageloaded */
+		width: 100%;
+		left: 0rem;
+	}
+	/* .imagehold runs from 66.67% - 94.43% */
+	94.43% { /* .imageloaded */
+		width: 100%;
+		left: 0rem;
+	}
+	94.44% { /* .imagepreunload */
+		width: 100%;
+		left: 0rem;
+		right: 50rem;
+	}
+	100% { /* imageunloaded */
+		width: 100%;
+		right: 0rem;
+		left: 0rem;
+		height: 100%;
+		opacity: 1;
+	}
+}
+
+#proparallax img.one{
+	animation-name: parallax_one; /* controls img.one movement */
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-direction: forwards;
+	object-fit: cover;
+}
+
+#proparallax img.two {
+	animation-name: parallax_two; /* controls img.two movement */
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 8s;
+	animation-direction: forwards;
+	object-fit: cover;
+}
+
+#proparallax img.three {
+	animation-name: parallax_three; /* controls img.three movement */
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 8s;
+	animation-direction: forwards;
+	object-fit: cover;
+}
+
+
